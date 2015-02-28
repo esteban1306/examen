@@ -41,6 +41,13 @@
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
+      function clickear(){
+        data.addRows([
+          ['IE6', 5],
+          ['IE7', 24],
+          ['IE8', 76]
+        ]);
+    }
     </script>
     <title>Examen</title>
   </head>
@@ -72,6 +79,9 @@
 <a id="hola-mundo" class="anchor" href="#hola-mundo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hola Mundo</h2>
      <!--Div that will hold the pie chart-->
     <div id="chart_div"></div>
+    
+    <button onclick="clickear()">Boton</button>
+    
       </section>
     </div>
 
