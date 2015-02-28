@@ -20,17 +20,27 @@
       // Callback that creates and populates a data table,
       // instantiates the pie chart, passes in the data and
       // draws it.
+      var cont = 0;
       function drawChart() {
 
         // Create the data table.
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Slices');
+        if (cont % 2 ==0)
+        {
         data.addRows([
           ['IE6', 5],
           ['IE7', 20],
           ['IE8', 75]
         ]);
+        } else {
+         data.addRows([
+          ['IE6', 50],
+          ['IE7', 40],
+          ['IE8', 10]
+        ]); 
+        }
 
         // Set chart options
         var options = {'title':'INTERNET EXPLORER VERSION',
@@ -47,11 +57,21 @@
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Slices');
+         if (cont % 2 ==0)
+        {
         data.addRows([
+          ['IE6', 5],
+          ['IE7', 20],
+          ['IE8', 75]
+        ]);
+        } else {
+         data.addRows([
           ['IE6', 50],
           ['IE7', 40],
           ['IE8', 10]
-        ]);
+        ]); 
+        }
+        cont ++;
 
         // Set chart options
         var options = {'title':'INTERNET EXPLORER VERSION',
