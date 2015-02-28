@@ -42,7 +42,7 @@
         chart.draw(data, options);
       }
       function clickear(){
-        
+       google.setOnLoadCallback(clickear); 
         // Create the data table.
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Topping');
